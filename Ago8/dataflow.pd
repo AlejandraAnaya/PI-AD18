@@ -1,0 +1,74 @@
+#N canvas 27 23 725 545 10;
+#X obj 82 74 +;
+#X floatatom 84 112 5 0 0 0 - - -;
+#X floatatom 82 19 5 0 0 0 - - -;
+#X floatatom 100 44 5 0 0 0 - - -;
+#X obj 85 175 - 20;
+#X floatatom 83 213 5 0 0 0 - - -;
+#X floatatom 126 131 5 0 0 0 - - -;
+#X text 80 -4 dataflow;
+#X obj 226 18 key;
+#X floatatom 226 44 5 0 0 0 - - -;
+#X obj 226 72 select 97 115 100 102;
+#X obj 226 104 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 252 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 284 104 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 310 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 352 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 221 -1 key y select;
+#X obj 448 72 metro 1000;
+#X obj 448 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 442 38 1;
+#X msg 478 38 0;
+#X floatatom 522 38 5 0 0 0 - - -;
+#X obj 419 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 529 73 5 0 0 0 - - -;
+#X text 431 5 metro \, bang y equivalentes;
+#X obj 35 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 228 314 osc~ 440;
+#X floatatom 229 277 5 0 0 0 - - -;
+#X obj 227 381 dac~;
+#X msg 225 134 220;
+#X msg 261 134 440;
+#X msg 294 135 880;
+#X msg 331 136 110;
+#X text 275 276 señales \, oscilador sinusoidal y dac;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 5 0;
+#X connect 6 0 4 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 10 3 14 0;
+#X connect 10 4 15 0;
+#X connect 11 0 29 0;
+#X connect 12 0 30 0;
+#X connect 13 0 31 0;
+#X connect 14 0 32 0;
+#X connect 17 0 18 0;
+#X connect 19 0 17 0;
+#X connect 20 0 17 0;
+#X connect 21 0 17 0;
+#X connect 22 0 17 0;
+#X connect 23 0 17 1;
+#X connect 25 0 0 0;
+#X connect 26 0 28 0;
+#X connect 26 0 28 1;
+#X connect 27 0 26 0;
+#X connect 29 0 27 0;
+#X connect 30 0 27 0;
+#X connect 31 0 27 0;
+#X connect 32 0 27 0;
