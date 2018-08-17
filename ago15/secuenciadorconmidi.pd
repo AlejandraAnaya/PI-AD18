@@ -1,0 +1,128 @@
+#N canvas 51 33 740 749 10;
+#X obj 53 50 metro 200;
+#X floatatom 104 25 5 0 0 0 - - -;
+#X obj 53 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 51 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 50 106 counter 7;
+#X floatatom 51 131 5 0 0 0 - - -;
+#X obj 50 169 select 0 1 2 3 4 5 6 7;
+#X obj 52 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 72 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 92 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 111 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 131 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 151 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 172 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 192 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 51 424 5 0 0 0 - - -;
+#X obj 125 327 i;
+#X obj 211 327 i;
+#X obj 288 327 i;
+#X obj 380 327 i;
+#X obj 395 299 random 127;
+#X obj 395 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 457 327 i;
+#X obj 472 299 random 127;
+#X obj 472 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 543 327 i;
+#X obj 558 299 random 127;
+#X obj 558 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 620 327 i;
+#X obj 635 299 random 127;
+#X obj 635 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 51 482 mtof;
+#X floatatom 51 506 5 0 0 0 - - -;
+#X obj 51 534 osc~;
+#X obj 50 619 dac~;
+#X obj 48 327 i;
+#X obj 63 299 random 127;
+#X obj 63 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 140 299 random 127;
+#X obj 140 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 226 299 random 127;
+#X obj 226 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 303 299 random 127;
+#X obj 303 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 53 -3 esto es un secuenciador de pasos;
+#X text 140 54 metro produce un bang cada 200ms;
+#X text 139 105 cada que counter recibe un bang \, produce un numero
+entre 0 y 7 en forma incremental;
+#X text 201 166 el numero pasa al select que lo canaliza a cada paso
+;
+#X text 365 209 cada que mando un bang a las casillas a los objetos
+random \, estos producen un número entre 0 y 127: una nota en escala
+MIDI;
+#X text 226 403 los numeros se almacenan en el objeto i \, y pasan
+como parametro cuando al condensador en el paso que les corresponde
+;
+#X text 109 487 mtof transforma el numero MIDI en la frecuencia que
+se le asigna al oscilador;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 6 2 9 0;
+#X connect 6 3 10 0;
+#X connect 6 4 11 0;
+#X connect 6 5 12 0;
+#X connect 6 6 13 0;
+#X connect 6 7 14 0;
+#X connect 7 0 35 0;
+#X connect 8 0 16 0;
+#X connect 9 0 17 0;
+#X connect 10 0 18 0;
+#X connect 11 0 19 0;
+#X connect 12 0 22 0;
+#X connect 13 0 25 0;
+#X connect 14 0 28 0;
+#X connect 15 0 31 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 0;
+#X connect 18 0 15 0;
+#X connect 19 0 15 0;
+#X connect 20 0 19 1;
+#X connect 21 0 20 0;
+#X connect 22 0 15 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 15 0;
+#X connect 26 0 25 1;
+#X connect 27 0 26 0;
+#X connect 28 0 15 0;
+#X connect 29 0 28 1;
+#X connect 30 0 29 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 0 34 1;
+#X connect 35 0 15 0;
+#X connect 36 0 35 1;
+#X connect 37 0 36 0;
+#X connect 38 0 16 1;
+#X connect 39 0 38 0;
+#X connect 40 0 17 1;
+#X connect 41 0 40 0;
+#X connect 42 0 18 1;
+#X connect 43 0 42 0;
